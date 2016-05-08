@@ -37,6 +37,15 @@ MOTIVATION
        and then pipe whatever binary data you wish.
 
 
+INSTALLATION
+       Using the attached Makefile should suffice on  most  Unix  systems.  On
+       OSX,  the  attached  Ruby file acts as a Homebrew Formula. Binaries for
+       Linux and OSX are available on the Releases section of this repository.
+       Scotty  has  no dependencies, so it is highly portable and can be user-
+       installed to a home directory, or even copied to a server  with  scp(1)
+       or equivalent.
+
+
 KEYBINDINGS
        ^D     [D]one with message (send current message to stdout)
 
@@ -51,15 +60,15 @@ KEYBINDINGS
               Erase a character
 
 
-       ^L     C[l]ear and redraw (in case the terminal output breaks for  some
+       ^L     C[l]ear  and redraw (in case the terminal output breaks for some
               reason).
 
 
-       \      Input  an  ANSI-C  string escape character (supports \a, \b, \e,
+       \      Input an ANSI-C string escape character (supports  \a,  \b,  \e,
               \f, \n, \r, \t, \v and \x** for a raw hex value)
 
 
-       \!     Input from shell (brings up a prompt for sh(1) and inserts  std-
+       \!     Input  from shell (brings up a prompt for sh(1) and inserts std-
               out value into buffer).
 
 
@@ -72,10 +81,10 @@ MISC OTHER TRICKS
 
               scotty 2>> /dev/null | auth
 
-       If  you  are piping to a program that requires a TTY for stdin, you can
+       If you are piping to a program that requires a TTY for stdin,  you  can
        trick it using a pty. One way to do this is with script(1) as shown:
 
-              $ scotty | script -q /dev/null  python  -c  "import  sys;  print
+              $  scotty  |  script  -q  /dev/null python -c "import sys; print
               sys.stdin.isatty()"
 
               True

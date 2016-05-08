@@ -51,6 +51,16 @@ $ scotty | nc evil.site.com 1337
 
 and then pipe whatever binary data you wish.
 
+.SH INSTALLATION
+
+Using the attached Makefile should suffice on most Unix systems. On OSX, the
+attached Ruby file acts as a Homebrew Formula. Binaries for Linux and OSX are
+available on the Releases section of this repository. Scotty has no
+dependencies, so it is highly portable and can be user-installed to a home
+directory, or even copied to a server with
+.BR scp(1)
+or equivalent.
+
 .SH KEYBINDINGS
 
 .IP ^D
